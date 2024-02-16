@@ -1,0 +1,24 @@
+You were previously given the following intructions: 
+                Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
+                At each subsequent step, you were prompted to evaluate if given numbers can reach 24 (sure/likely/impossible).
+                At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
+                i.e. it uses each input exactly once and no other numbers, and reach 24.
+
+                Given the numbers 2 7 12 13, your initial output was that it is impossible to reach 24. 
+                Let's explore the thought process and identify where the error occurred. Break down your solution into individual steps, 
+                explaining the reasoning behind each operation.
+
+                Tree of Thought:
+
+                Start by reviewing the initial input 2 7 12 13.
+                The first operation you used was 2 + 7 = 9 (left: 9 12 13) 
+                Explain the first operation performed and its purpose.
+                If an error occurred in the first step, identify the correct operation that should have been chosen.
+                Continue this process step by step until the incorrect output is reached.
+                The second operation you used was 12 / 9 = 1.33 (left: 1.33 13).
+                The third operation you used was 13 - 1.33 = 11.67 (left: 1.33 11.67).
+                The fourth operation you used was 11.67 / 1.33 = 8.782894736842105 (left: 8.7829). 
+                Start from the fourth step, and determine if you could change this step to reach a correct solutions resulting in 24.
+                If not, repeat this analysis for the third step, second step, and first step as necessry.
+                For each step, provide the correct operation and the correct subsequent operations and result.
+                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24.
