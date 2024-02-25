@@ -1,6 +1,8 @@
 import re
 import os
 
+
+
 def split_equation(equation):
     numbers = list(map(int, re.findall(r'\b\d+\b', equation)))
     operations = re.findall(r'[+\-*/]', equation)
@@ -36,12 +38,14 @@ for filename in os.listdir(directory):
                         eq = equation.split(']')[1]
                         step1, step2, step3 = split_equation(eq)
                         filepath = filename[:-4] + "_steps.txt"
-                        f = open(filepath, "w") 
+                        f = open(filepath, "a") 
                         f.write(step1)
                         f.write("\n")
                         f.write(step2)
                         f.write("\n")
                         f.write(step3)
+                        f.write("\n")
+                        f.write("***")
                         f.write("\n")
                         f.close()
 

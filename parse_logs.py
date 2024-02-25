@@ -1,5 +1,6 @@
 import json
- 
+import solution_prompts
+
 # load contents of json log
 f = open('./gpt-4_0.7_propose1_value3_greedy5_start900_end1000.json')
 data = json.load(f)
@@ -76,7 +77,7 @@ for game_idx in list(final_result.keys()):
             equation2 = equations[1]
             equation3 = equations[2]
             equation4 = equations[3]
-            prompt = """You were previously given the following intructions: 
+            prompt = """You were previously given the following instructions: 
                 Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
                 At each subsequent step, you were prompted to evaluate if given numbers can reach 24 (sure/likely/impossible).
                 At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
@@ -99,12 +100,15 @@ for game_idx in list(final_result.keys()):
                 Start from the fourth step, and determine if you could change this step to reach a correct solutions resulting in 24.
                 If not, repeat this analysis for the third step, second step, and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
-                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24."""
+                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24.
+                
+                Evaluate whether your new response correctly evaluates to 24. If it does not, review the following: """ + "\n" + solution_prompts.gen_solution_prompt(game_idx)
+
         elif len(equations) == 3:
             equation1 = equations[0]
             equation2 = equations[1]
             equation3 = equations[2]
-            prompt = """You were previously given the following intructions: 
+            prompt = """You were previously given the following instructions: 
                 Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
                 At each subsequent step, you were prompted to evaluate if given numbers can reach 24 (sure/likely/impossible).
                 At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
@@ -127,8 +131,11 @@ for game_idx in list(final_result.keys()):
                 Start from the third step, and determine if you could change this step to reach a correct solutions resulting in 24.
                 If not, repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
-                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24."""
-        filepath = "./prompts/prompt_" + str(game_idx) + ".txt"
+                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24.
+
+                Evaluate whether your new response correctly evaluates to 24. If it does not, review the following: """ + "\n" + solution_prompts.gen_solution_prompt(game_idx)
+
+        filepath = "./new_prompts/prompt_" + str(game_idx) + ".txt"
         f = open(filepath, "w")
         f.write(prompt)
         f.close()
