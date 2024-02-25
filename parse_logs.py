@@ -91,7 +91,8 @@ for game_idx in list(final_result.keys()):
 
                 Start by reviewing the initial input """ + str(tmp_x) + """.
                 The first operation you used was """ + str(equation1) + """ 
-                Explain the first operation performed and its purpose.
+                Explain the first operation performed and its purpose. 
+                That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
                 If an error occurred in the first step, identify the correct operation that should have been chosen.
                 Continue this process step by step until the incorrect output is reached.
                 The second operation you used was """ + str(equation2) +  """.
@@ -122,7 +123,8 @@ for game_idx in list(final_result.keys()):
 
                 Start by reviewing the initial input """ + str(x) + """.
                 The first operation you used was """ + str(equation1) + """ 
-                Explain the first operation performed and its purpose.
+                Explain the first operation performed and its purpose. 
+                That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
                 If an error occurred in the first step, identify the correct operation that should have been chosen.
                 Continue this process step by step until the incorrect output is reached.
                 The second operation you used was """ + str(equation2) + """.
