@@ -157,5 +157,6 @@ for game_idx in list(final_result.keys()):
         f.close()
 
 
-
+def get_step_0s():
+    return step_0
 

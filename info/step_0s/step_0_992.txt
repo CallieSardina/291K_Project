@@ -1,0 +1,1 @@
+9 / 2 = 4.5 (left: 2 4.5 8) (if considering non-integer results)

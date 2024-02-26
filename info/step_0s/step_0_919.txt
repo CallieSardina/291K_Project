@@ -1,0 +1,1 @@
+7 / 3 = 2.333 (left: 2.333 3 6) (not a whole number)
