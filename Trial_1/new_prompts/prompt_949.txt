@@ -1,0 +1,32 @@
+You were previously given the following instructions: 
+                Use numbers and basic arithmetic operations (+ - * /) to obtain 24. You may only use three equations to reach the answer.
+                The output of the first equation is used with as an input in the next equation along with another of the input numbers. This pattern continues for all three equations.
+                At each subsequent step, you were prompted to evaluate if given numbers can reach 24 (sure/likely/impossible).
+                At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
+                i.e. it uses each input exactly once and no other numbers, and reach 24.
+
+                Given the numbers 1 6 6 6, your initial output was that it is impossible to reach 24. 
+                Let's explore the thought process and identify where the error occurred. Break down your solution into individual steps, 
+                explaining the reasoning behind each operation.
+
+                Tree of Thought:
+
+                Start by reviewing the initial input 1 6 6 6.
+                The first operation you used was 1 * 6 = 6 (left: 6 6 6) 
+                Explain the first operation performed and its purpose. 
+                That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
+                If an error occurred in the first step, identify the correct operation that should have been chosen.
+                Continue this process step by step until the incorrect output is reached.
+                The second operation you used was 6 + 6 = 12 (left: 6 12).
+                The third operation you used was 12 - 6 = 6 (left: 6 6).
+                The fourth operation you used was 6 / 6 = 1 (left: 1 6). 
+                Start from the fourth step, and determine if you could change this step to reach a correct solutions resulting in 24.
+                If not, repeat this analysis for the third step, second step, and first step as necessry.
+                For each step, provide the correct operation and the correct subsequent operations and result.
+                Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24, and report the solution
+                in the following format, remember that you can only use 3 equations to reach 24:
+                [Equation 1]: 
+                [Equation 2]:
+                [Equation 3]: 
+
+                Evaluate whether your new response correctly evaluates to 24.
