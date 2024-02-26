@@ -45,7 +45,7 @@ for game_idx in list(final_result.keys()):
             numbers.append(char) 
         else:
             operations.append(char)
-    numbers = numbers[0:4]
+    numbers = numbers[0:3]
     operations = operations[0:1]
 
     filepath = "./info/nums_and_ops/nums_and_ops_" + str(game_idx) + ".txt"
