@@ -84,13 +84,13 @@ for game_idx in list(final_result.keys()):
                 At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
                 i.e. it uses each input exactly once and no other numbers, and reach 24.
             
-                Input: Given the numbers """ + str(x) + """, your initial output was that it is impossible to reach 24. 
+                Input: Given the numbers """ + str(tmp_x) + """, your initial output was that it is impossible to reach 24. 
                 Let\'s explore the thought process and identify where the error occurred. Break down your solution into individual steps, 
                 explaining the reasoning behind each operation.
 
                 Tree of Thought:
 
-                Start by reviewing the initial input """ + str(x) + """.
+                Start by reviewing the initial input """ + str(tmp_x) + """.
                 The first operation you used was """ + str(equation1) + """ 
                 Explain the first operation performed and its purpose. 
                 That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
@@ -100,7 +100,7 @@ for game_idx in list(final_result.keys()):
                 The third operation you used was """ + str(equation3) + """.
                 You provided a fourth step (which is nto permitted). It was """ + str(equation4) + """.
                 Start from the final step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct final step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
+                The correct first step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
                 Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24, and report the solution
@@ -123,13 +123,13 @@ for game_idx in list(final_result.keys()):
                 At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
                 i.e. it uses each input exactly once and no other numbers, and reach 24.
             
-                Input: Given the numbers """ + str(x) + """, your initial output was that it is impossible to reach 24. 
+                Input: Given the numbers """ + str(tmp_x) + """, your initial output was that it is impossible to reach 24. 
                 Let\'s explore the thought process and identify where the error occurred. Break down your solution into individual steps, 
                 explaining the reasoning behind each operation.
 
                 Tree of Thought:
 
-                Start by reviewing the initial input """ + str(x) + """.
+                Start by reviewing the initial input """ + str(tmp_x) + """.
                 The first operation you used was """ + str(equation1) + """ 
                 Explain the first operation performed and its purpose. 
                 That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
@@ -139,7 +139,7 @@ for game_idx in list(final_result.keys()):
                 The third operation you used was """ + str(equation3) + """.
                 After the third operation, you deemed it impossible to reach 24 with the given input numbers.
                 Start from the third step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct third step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
+                The correct first step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
                 Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24, and report the solution
@@ -151,7 +151,7 @@ for game_idx in list(final_result.keys()):
                 Evaluate whether your new response correctly evaluates to 24.""" 
                 # If it does not, review the following: """ + "\n" + solution_prompts.gen_solution_prompt(game_idx)
 
-        filepath = "./given_eq3/prompt_" + str(game_idx) + ".txt"
+        filepath = "./Trial_2/given_eq3/prompt_" + str(game_idx) + ".txt"
         f = open(filepath, "w")
         f.write(prompt)
         f.close()

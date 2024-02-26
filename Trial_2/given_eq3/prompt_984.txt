@@ -5,13 +5,13 @@ You were previously given the following instructions:
                 At the final step, you were given an input and an answer and instructed to give a judgement (sure/impossible) if the answer is correct, 
                 i.e. it uses each input exactly once and no other numbers, and reach 24.
             
-                Input: Given the numbers 4 9 10 13, your initial output was that it is impossible to reach 24. 
+                Input: Given the numbers 2 6 7 11, your initial output was that it is impossible to reach 24. 
                 Let's explore the thought process and identify where the error occurred. Break down your solution into individual steps, 
                 explaining the reasoning behind each operation.
 
                 Tree of Thought:
 
-                Start by reviewing the initial input 4 9 10 13.
+                Start by reviewing the initial input 2 6 7 11.
                 The first operation you used was 2 + 6 = 8 (left: 7 8 11) 
                 Explain the first operation performed and its purpose. 
                 That is, explain why you chose these numbers and corresponding operation to start with as opposed to any other combination.
@@ -21,8 +21,7 @@ You were previously given the following instructions:
                 The third operation you used was 7 - 1.375 = 5.625 (left: 1.375 5.625).
                 You provided a fourth step (which is nto permitted). It was 5.625 / 1.375 = 4.0909 (left: 4.0909).
                 Start from the final step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct final step is: The correct third equation in the sequence of three equations using these input numbers to reach 24 is:
-                12 * 2 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
+                The correct first step is: 12 * 2 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
                 first two steps in solving this game of 24.
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
