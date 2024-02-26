@@ -100,7 +100,7 @@ for game_idx in list(final_result.keys()):
                 The third operation you used was """ + str(equation3) + """.
                 You provided a fourth step (which is nto permitted). It was """ + str(equation4) + """.
                 Start from the final step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct first step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
+                The correct final step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
                 Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24, and report the solution
@@ -139,7 +139,7 @@ for game_idx in list(final_result.keys()):
                 The third operation you used was """ + str(equation3) + """.
                 After the third operation, you deemed it impossible to reach 24 with the given input numbers.
                 Start from the third step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct first step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
+                The correct final step is: """ + solution_prompts.gen_solution_prompt(game_idx) + """
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
                 Conclude by summarizing the correct sequence of operations that lead to the correct solution for the game of 24, and report the solution

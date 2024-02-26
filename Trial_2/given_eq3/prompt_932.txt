@@ -21,7 +21,7 @@ You were previously given the following instructions:
                 The third operation you used was 30 / 6 = 5 (left: 5 6).
                 You provided a fourth step (which is nto permitted). It was 6 - 5 = 1 (left: 1).
                 Start from the final step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct first step is: 30 - 6 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
+                The correct final step is: 30 - 6 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
                 first two steps in solving this game of 24.
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.

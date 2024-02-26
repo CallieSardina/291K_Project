@@ -21,7 +21,7 @@ You were previously given the following instructions:
                 The third operation you used was 11 - 3 = 8 (left: 8 8).
                 You provided a fourth step (which is nto permitted). It was 8 / 8 = 1 (left: 1 8).
                 Start from the final step, and determine if you could change this step to reach a correct solutions resulting in 24.
-                The correct first step is: 28 - 4 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
+                The correct final step is: 28 - 4 = 24. Use this information to reason about how to reach this final conclusion, and determine the 
                 first two steps in solving this game of 24.
                 Given this information, reevaluate, then repeat this analysis for the second step and first step as necessry.
                 For each step, provide the correct operation and the correct subsequent operations and result.
