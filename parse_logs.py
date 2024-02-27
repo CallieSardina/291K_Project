@@ -14,6 +14,7 @@ final_ys = {} # map: game index --> final ys with all 4 equations and if they eq
 final_result = {} # map: game index --> win (1) / lose (0)
 
 for game in data:
+
     # get game index [900-1000]
     game_idx = game['idx']
 
@@ -23,6 +24,7 @@ for game in data:
 
     # fill game index --> step results dictionaries with results/ steps
     for step in range(4):
+
         candidate_ys = game['steps'][step]['new_ys']
         values = game['steps'][step]['values']
         new_ys = game['steps'][step]['select_new_ys']
@@ -32,13 +34,25 @@ for game in data:
             else:
                 selected = 0
             if step == 0:
-                step_0[game_idx] = (candidate_ys[i][:-1], values[i], selected) # added the [:-1] to take off the newline character
+                if game_idx not in list(step_0.keys()):
+                    step_0[game_idx] = [(candidate_ys[i][:-1], values[i], selected)]
+                else:
+                    step_0[game_idx].append((candidate_ys[i][:-1], values[i], selected)) # added the [:-1] to take off the newline character
             elif step == 1:
-                step_1[game_idx] = (candidate_ys[i][:-1], values[i], selected)
+                if game_idx not in list(step_1.keys()):
+                    step_1[game_idx] = [(candidate_ys[i][:-1], values[i], selected)]
+                else:
+                    step_1[game_idx].append((candidate_ys[i][:-1], values[i], selected))
             elif step == 2:
-                step_2[game_idx] = (candidate_ys[i][:-1], values[i], selected)
+                if game_idx not in list(step_2.keys()):
+                    step_2[game_idx] = [(candidate_ys[i][:-1], values[i], selected)]
+                else:
+                    step_2[game_idx].append((candidate_ys[i][:-1], values[i], selected))
             else:
-                step_3[game_idx] = (candidate_ys[i][:-1], values[i], selected)
+                if game_idx not in list(step_3.keys()):
+                    step_3[game_idx] = [(candidate_ys[i][:-1], values[i], selected)]
+                else:
+                    step_3[game_idx].append((candidate_ys[i][:-1], values[i], selected))
 
     # get final ys and results (correct/ incorrect)
     ys = game['ys']
@@ -53,7 +67,7 @@ for game in data:
             final_result[game_idx] = 1
     if game_idx not in final_result:
         final_result[game_idx] = 0
-
+#print(step_0[900])
 # Get all games which were lost (incorrect / impossible result)
 for game_idx in list(final_result.keys()):
     if final_result[game_idx] == 0:
@@ -159,4 +173,8 @@ for game_idx in list(final_result.keys()):
 
 def get_step_0s():
     return step_0
+
+
+def get_final_results():
+    return final_result
 
