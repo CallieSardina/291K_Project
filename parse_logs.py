@@ -13,6 +13,8 @@ step_3 = {} # map: game index --> (candidate_y, value, selected (0 = no, 1 = yes
 final_ys = {} # map: game index --> final ys with all 4 equations and if they equal 24 (ys, ==24?1:0)
 final_result = {} # map: game index --> win (1) / lose (0)
 
+lost_game_indices = []
+
 for game in data:
 
     # get game index [900-1000]
@@ -166,10 +168,12 @@ for game_idx in list(final_result.keys()):
                 # If it does not, review the following: """ + "\n" + solution_prompts.gen_solution_prompt(game_idx)
 
         filepath = "./Trial_2/given_eq3/prompt_" + str(game_idx) + ".txt"
+        lost_game_indices.append(game_idx)
         f = open(filepath, "w")
         f.write(prompt)
         f.close()
 
+print(lost_game_indices)
 
 def get_step_0s():
     return step_0

@@ -36,20 +36,20 @@ for game_idx in list(final_results.keys()):
     else:
         losses.append(game_idx)
 
-add_count = 0
-sub_count = 0
-mult_count = 0
-div_count = 0
+# add_count = 0
+# sub_count = 0
+# mult_count = 0
+# div_count = 0
 
-add_count_win = 0
-sub_count_win = 0
-mult_count_win = 0
-div_count_win = 0
+# add_count_win = 0
+# sub_count_win = 0
+# mult_count_win = 0
+# div_count_win = 0
 
-add_count_loss = 0
-sub_count_loss = 0
-mult_count_loss = 0
-div_count_loss = 0
+# add_count_loss = 0
+# sub_count_loss = 0
+# mult_count_loss = 0
+# div_count_loss = 0
 
 for game_idx in list(final_result.keys()):
 
@@ -59,10 +59,11 @@ for game_idx in list(final_result.keys()):
     step_0s = parse_logs.get_step_0s()
     for i in step_0s:
         #step_0 = parse_logs.get_step_0s()[game_idx][0]
-        with open("./info/step_0s/step_0_" + str(game_idx) + ".txt", "w") as f:
-            for triple in step_0s[i]:
-                f.write(str(triple))
-                f.write("\n")
+        if str(i) == str(game_idx):
+            with open("./info/step_0s/step_0_" + str(game_idx) + ".txt", "w") as f:
+                for triple in step_0s[i]:
+                    f.write(str(triple[0].split("(")[0][:-1]))
+                    f.write("\n")
 
 #     numbers = []
 #     operations = []
