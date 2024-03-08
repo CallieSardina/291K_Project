@@ -1,13 +1,13 @@
-Input: x x x x 
+import os
 
-Equation 1: x (operation) x = a
-Equation 2: x (operation) a = b or a (operation) x = b 
-Equation 3: x (operation) b = 24 or b (operation) x = 24
+directory_path = "./all_solution_steps/"  
 
-You can use the inputs in any order, but each input may only be used once. 
-You may use basic arithmetic operations +,-,*,/.
+if not os.path.exists(directory_path):
+    os.makedirs(directory_path)
 
-________________________________________________
-
-
-
+for i in range(900, 1000):
+    file_name = f"{i}.txt"
+    file_path = os.path.join(directory_path, file_name)
+    
+    with open(file_path, "w") as file:
+        file.write("")
