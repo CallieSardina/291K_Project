@@ -18,12 +18,13 @@ def rearrange_equation(equation):
         return equation
 
 
-lost_game_indices = [902, 906, 912, 914, 919, 921, 928, 930, 931, 932, 933, 936, 938, 948, 949, 950, 951, 957, 961, 968, 969, 972, 975, 979, 982, 984, 986, 988, 989, 991, 992]
+lost_game_indices = [900, 901, 902, 905, 906, 907, 909, 910, 912, 913, 914, 915, 916, 917, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 935, 936, 937, 938, 939, 940, 941, 943, 946, 948, 949, 950, 951, 952, 953, 954, 957, 959, 960, 961, 963, 965, 967, 968, 969, 971, 972, 973, 974, 975, 977, 978, 979, 980, 981, 982, 984, 985, 986, 987, 988, 989, 991, 992, 993, 994, 995, 996, 999]
+print(len(lost_game_indices))
 booleans = {}
 
 for i in lost_game_indices:
-    filename_incorrect = "./info/step_0s/step_0_" + str(i) + ".txt"
-    filename_solution = "./solution_steps/prompt_" + str(i) + "_solution_steps.txt"
+    filename_incorrect = "./our_test_runs/initial_steps/step_0_" + str(i) + ".txt"
+    filename_solution = "./split_equations-EREN-USE-THESE/" + str(i) + "_steps.txt"
     equations_incorrect = []
     equations_solution = []
     print(filename_incorrect)

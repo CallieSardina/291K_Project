@@ -2,7 +2,7 @@ import json
 import solution_prompts
 
 # load contents of json log
-f = open('./gpt-4_0.7_propose1_value3_greedy5_start900_end1000.json')
+f = open('./gpt-3.5-turbo_0.7_propose1_value3_greedy5_start900_end1000.json')
 data = json.load(f)
 
 x_input_numbers = {} # map: game index --> 4 input numbers
@@ -86,10 +86,10 @@ for game in data:
 
 #print(step_0[900])
 # Get all games which were lost (incorrect / impossible result)
-# for game_idx in list(final_result.keys()):
-#     if final_result[game_idx] == 0:
-#         tmp_x = x_input_numbers[game_idx]
-#         tmp_ys = final_ys[game_idx]
+for game_idx in list(final_result.keys()):
+    if final_result[game_idx] == 0:
+        tmp_x = x_input_numbers[game_idx]
+        tmp_ys = final_ys[game_idx]
 #         for i in range(len(tmp_ys)):
 #             equations = tmp_ys[i][0].split("\n")
 #             f = open("games_lost.txt", "w")
@@ -183,12 +183,12 @@ for game in data:
         #         # If it does not, review the following: """ + "\n" + solution_prompts.gen_solution_prompt(game_idx)
 
         # filepath = "./Trial_2/given_eq3/prompt_" + str(game_idx) + ".txt"
-        # lost_game_indices.append(game_idx)
+        lost_game_indices.append(game_idx)
         # f = open(filepath, "w")
         # f.write(prompt)
         # f.close()
 
-# print(lost_game_indices)
+print(lost_game_indices)
 
 def get_step_0s():
     return step_0

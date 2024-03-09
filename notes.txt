@@ -1,0 +1,2 @@
+only 22 % win rate with GPt-3.5, 78 % loss
+only lost a game that had a correct step 1 time, rated it 0.003 
